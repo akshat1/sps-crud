@@ -1,0 +1,22 @@
+{
+  "name": "sps-crud",
+  "version": "0.0.1",
+  "description": "CRUD for the simian photo server project.",
+  "main": "lib/index.js",
+  "scripts": {
+    "setup-cayley": "./setup-cayley.sh",
+    "start-cayley": "(cd ./cayley/ && exec ./cayley http --config=../cayley.json &)",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshat1/sps-crud.git"
+  },
+  "author": "akshat.sh@gmail.com",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/akshat1/sps-crud/issues"
+  },
+  "homepage": "https://github.com/akshat1/sps-crud#readme"
+}
