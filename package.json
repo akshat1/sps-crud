@@ -4,8 +4,9 @@
   "description": "CRUD for the simian photo server project.",
   "main": "lib/index.js",
   "scripts": {
-    "setup-cayley": "./setup-cayley.sh",
-    "start-cayley": "(cd ./cayley/ && exec ./cayley http --config=../cayley.json &)",
+    "setup": "./setup-cayley.sh",
+    "start": "(cd ./cayley/ && exec ./cayley http --config=../cayley.json &)",
+    "stop": "pkill cayley",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
