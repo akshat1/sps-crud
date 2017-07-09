@@ -4,7 +4,7 @@
   "description": "CRUD for the simian photo server project.",
   "main": "lib/index.js",
   "scripts": {
-    "doc": "jsdoc -c jsdoc.conf",
+    "document": "jsdoc -c jsdoc.conf",
     "fix-lint": "eslint lib/ --fix",
     "lint": "eslint lib/",
     "plato": "plato -d plato -r -e .eslintrc.plato.json lib/",
