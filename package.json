@@ -30,6 +30,7 @@
     "eslint-config-simian": "0.0.3",
     "jsdoc": "^3.4.3",
     "jsdoc-strip-async-await": "^0.1.0",
+    "plato": "^1.7.0",
     "toast-jsdoc": "^1.0.2"
   }
 }
