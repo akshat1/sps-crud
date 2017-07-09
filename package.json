@@ -26,6 +26,7 @@
     "simian-server-common": "git://github.com/akshat1/simian-server-common.git"
   },
   "devDependencies": {
+    "eslint": "^4.2.0",
     "eslint-config-simian": "0.0.3",
     "jsdoc": "^3.4.3",
     "jsdoc-strip-async-await": "^0.1.0",
