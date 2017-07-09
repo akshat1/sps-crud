@@ -8,7 +8,7 @@
     "fix-lint": "eslint lib/ --fix",
     "lint": "eslint lib/",
     "plato": "plato -d plato -r -e .eslintrc.plato.json lib/",
-    "test": "mocha"
+    "test": "node_modules/.bin/nyc node_modules/.bin/mocha test/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,29 @@
     "url": "https://github.com/akshat1/simian-store/issues"
   },
   "homepage": "https://github.com/akshat1/simian-store#readme",
+  "nyc": {
+    "all": true,
+    "include": [
+      "lib/js/**/*.js",
+      "lib/js/**/*.jsx"
+    ],
+    "exclude": [
+      "test/**",
+      "node_modules/**",
+      "plato/**",
+      "docs/**"
+    ],
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "extension": [
+      ".jsx",
+      ".js"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
   "dependencies": {
     "mocha": "^3.4.2",
     "simian-server-common": "git://github.com/akshat1/simian-server-common.git"
@@ -30,6 +53,7 @@
     "eslint-config-simian": "0.0.3",
     "jsdoc": "^3.4.3",
     "jsdoc-strip-async-await": "^0.1.0",
+    "nyc": "^11.0.3",
     "plato": "^1.7.0",
     "toast-jsdoc": "^1.0.2"
   }
