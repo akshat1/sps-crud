@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint lib/ --fix",
     "test": "node_modules/.bin/nyc node_modules/.bin/mocha test/**/*.js",
-    "document": "jsdoc -c jsdoc.conf"
+    "document": "jsdoc -c jsdoc.conf",
+    "plato": "plato -d plato -r -e .eslintrc.plato.json lib/"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,9 @@
   "homepage": "https://github.com/akshat1/simian-store#readme",
   "nyc": {
     "all": true,
-    "include": ["lib/**/*.js"],
+    "include": [
+      "lib/**/*.js"
+    ],
     "exclude": [
       "test/**",
       "node_modules/**",
@@ -41,6 +44,7 @@
     "eslint-config-simian": "0.0.3",
     "jsdoc": "^3.4.3",
     "nyc": "^11.0.3",
+    "plato": "^1.7.0",
     "toast-jsdoc": "^1.0.2"
   }
 }
