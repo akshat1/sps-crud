@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint lib/ --fix",
     "test": "mocha",
-    "doc": "jsdoc -c jsdoc.conf"
+    "document": "jsdoc -c jsdoc.conf"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "eslint-config-simian": "0.0.3",
+    "jsdoc": "^3.4.3",
     "toast-jsdoc": "^1.0.2"
   }
 }
