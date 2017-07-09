@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint lib/ --fix",
-    "test": "mocha",
+    "test": "node_modules/.bin/nyc node_modules/.bin/mocha test/**/*.js",
     "document": "jsdoc -c jsdoc.conf"
   },
   "repository": {
@@ -19,6 +19,20 @@
     "url": "https://github.com/akshat1/simian-store/issues"
   },
   "homepage": "https://github.com/akshat1/simian-store#readme",
+  "nyc": {
+    "all": true,
+    "include": ["lib/**/*.js"],
+    "exclude": [
+      "test/**",
+      "node_modules/**",
+      "plato/**",
+      "docs/**"
+    ],
+    "reporter": [
+      "text",
+      "lcov"
+    ]
+  },
   "dependencies": {
     "mocha": "^3.4.2",
     "simian-server-common": "git://github.com/akshat1/simian-server-common.git"
@@ -26,6 +40,7 @@
   "devDependencies": {
     "eslint-config-simian": "0.0.3",
     "jsdoc": "^3.4.3",
+    "nyc": "^11.0.3",
     "toast-jsdoc": "^1.0.2"
   }
 }
