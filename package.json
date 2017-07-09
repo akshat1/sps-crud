@@ -24,8 +24,7 @@
   "nyc": {
     "all": true,
     "include": [
-      "lib/js/**/*.js",
-      "lib/js/**/*.jsx"
+      "lib/**/*.js"
     ],
     "exclude": [
       "test/**",
