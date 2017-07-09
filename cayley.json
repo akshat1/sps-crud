@@ -1,7 +1,0 @@
-{
-  "database": "mongo",
-  "db_path": "localhost:27017",
-  "db_options": {
-    "database_name": "sps-cayley"
-  }
-}

@@ -1,23 +1,30 @@
 {
-  "name": "sps-crud",
+  "name": "simian-store",
   "version": "0.0.1",
   "description": "CRUD for the simian photo server project.",
   "main": "lib/index.js",
   "scripts": {
-    "setup": "./setup-cayley.sh",
-    "start": "(cd ./cayley/ && exec ./cayley http --config=../cayley.json &)",
-    "stop": "pkill cayley",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint lib/ --fix",
+    "test": "mocha",
+    "doc": "jsdoc -c jsdoc.conf"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akshat1/sps-crud.git"
+    "url": "git+https://github.com/akshat1/simian-store.git"
   },
   "author": "akshat.sh@gmail.com",
   "license": "UNLICENSED",
   "private": true,
   "bugs": {
-    "url": "https://github.com/akshat1/sps-crud/issues"
+    "url": "https://github.com/akshat1/simian-store/issues"
   },
-  "homepage": "https://github.com/akshat1/sps-crud#readme"
+  "homepage": "https://github.com/akshat1/simian-store#readme",
+  "dependencies": {
+    "mocha": "^3.4.2",
+    "simian-server-common": "git://github.com/akshat1/simian-server-common.git"
+  },
+  "devDependencies": {
+    "eslint-config-simian": "0.0.3",
+    "toast-jsdoc": "^1.0.2"
+  }
 }
