@@ -45,15 +45,19 @@
   },
   "dependencies": {
     "mocha": "^3.4.2",
+    "mongodb": "^2.2.30",
     "simian-server-common": "git://github.com/akshat1/simian-server-common.git"
   },
   "devDependencies": {
+    "chai": "^4.1.0",
     "eslint": "^4.2.0",
     "eslint-config-simian": "0.0.3",
     "jsdoc": "^3.4.3",
     "jsdoc-strip-async-await": "^0.1.0",
+    "mockery": "^2.1.0",
     "nyc": "^11.0.3",
     "plato": "^1.7.0",
+    "sinon": "^2.3.8",
     "toast-jsdoc": "^1.0.2"
   }
 }
