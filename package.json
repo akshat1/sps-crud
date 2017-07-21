@@ -49,7 +49,6 @@
     "simian-server-common": "git://github.com/akshat1/simian-server-common.git"
   },
   "devDependencies": {
-    "chai": "^4.1.0",
     "eslint": "^4.2.0",
     "eslint-config-simian": "0.0.3",
     "jsdoc": "^3.4.3",
