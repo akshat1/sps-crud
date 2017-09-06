@@ -14,14 +14,20 @@ const FakeLogger = {
   error: noop
 };
 
-const FakeCursor = {};
-FakeCursor.skip = sinon.stub().returns(FakeCursor);
-FakeCursor.limit = sinon.stub().returns(FakeCursor);
-FakeCursor.sort = sinon.stub().returns(FakeCursor);
-FakeCursor.toArray = sinon.stub().returns(Promise.resolve(['foo', 'bar', 'baz']));
+const FakeMongoCursor = {};
+FakeMongoCursor.skip = sinon.stub().returns(FakeMongoCursor);
+FakeMongoCursor.limit = sinon.stub().returns(FakeMongoCursor);
+FakeMongoCursor.sort = sinon.stub().returns(FakeMongoCursor);
+FakeMongoCursor.count = sinon.stub().returns(Promise.resolve({}));
+FakeMongoCursor.toArray = sinon.stub().returns(Promise.resolve(['foo', 'bar', 'baz']));
+/*FakeMongoCursor.reset = function() {
+  Object
+    .values(FakeMongoCursor)
+    .forEach(x => typeof x.reset === 'function' && x.reset());
+}*/
 
 const FakeMongoCollection = {
-  find: sinon.stub().returns(FakeCursor)
+  find: sinon.stub().returns(FakeMongoCursor)
 };
 // This is what you will get from mongodb.client.connect
 const FakeMongoDatabase = {
@@ -51,6 +57,7 @@ describe('simian-store', function() {
   afterEach(function() {
     FakeMongoDatabase.collection.reset();
     FakeMongoClient.connect.reset();
+    // FakeMongoCursor.reset();
   });
 
   it('_getCollection', async function() {
@@ -91,6 +98,7 @@ describe('simian-store', function() {
       sort
     };
     const result = await Store.get(args);
+    console.log('>>>', result);
     assert.ok(Array.isArray(result.data), 'result should have property data as []');
     assert.equal(result.skip, args.skip, 'result should have included skip');
     assert.equal(result.limit, args.limit, 'result should have included limit');
