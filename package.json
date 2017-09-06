@@ -44,18 +44,21 @@
     "instrument": false
   },
   "dependencies": {
-    "mocha": "^3.4.2",
-    "simian-server-common": "git://github.com/akshat1/simian-server-common.git"
+    "mocha": "^3.5.0",
+    "pg": "^7.3.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.8.0",
+    "simian-server-common": "0.0.2"
   },
   "devDependencies": {
-    "eslint": "^4.2.0",
+    "eslint": "^4.6.1",
     "eslint-config-simian": "0.0.3",
-    "jsdoc": "^3.4.3",
+    "jsdoc": "^3.5.4",
     "jsdoc-strip-async-await": "^0.1.0",
     "mockery": "^2.1.0",
-    "nyc": "^11.0.3",
+    "nyc": "^11.2.0",
     "plato": "^1.7.0",
-    "sinon": "^2.3.8",
+    "sinon": "^3.2.1",
     "toast-jsdoc": "^1.0.2"
   }
 }
