@@ -1,3 +1,4 @@
 {
-  "db.connectionString": "postgres://simian-store-0:simian-store-0@localhost:5432/simian-store-0"
+  "db.connectionString": "postgres://simian-store-0:simian-store-0@localhost:5432/simian-store-0",
+  "db.testConnectionString": "postgres://simian-store-0:simian-store-0@localhost:5432/simian-store-test-0"
 }
