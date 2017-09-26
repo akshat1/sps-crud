@@ -8,7 +8,7 @@
     "fix-lint": "eslint lib/ --fix",
     "lint": "eslint lib/",
     "plato": "plato -d plato -r -e .eslintrc.plato.json ./lib/",
-    "test": "node_modules/.bin/nyc node_modules/.bin/mocha test/**/*.js"
+    "test": "nyc mocha"
   },
   "repository": {
     "type": "git",
@@ -24,30 +24,24 @@
   "nyc": {
     "all": true,
     "include": [
-      "lib/**/*.js"
+      "lib/*.js"
     ],
     "exclude": [
-      "test/**",
-      "node_modules/**",
-      "plato/**",
-      "docs/**"
+      "node_modules",
+      "plato",
+      "docs"
     ],
     "reporter": [
       "text",
       "lcov"
-    ],
-    "extension": [
-      ".jsx",
-      ".js"
-    ],
-    "sourceMap": false,
-    "instrument": false
+    ]
   },
   "dependencies": {
     "mocha": "^3.5.0",
     "pg": "^7.3.0",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.10.2",
+    "sequelize": "^4.11.0",
+    "sequelize-cli": "^3.0.0",
     "simian-server-common": "0.0.2"
   },
   "devDependencies": {
