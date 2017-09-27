@@ -2,13 +2,13 @@ const db = require('../lib');
 const assert = require('assert');
 
 const {
-  sequelize,
-  Vertex
+  Vertex,
+  sync,
 } = db;
 
 describe('Vertex', function() {
   before(function() {
-    return sequelize.sync({ force: true });
+    return sync({ force: true });
   });
 
   it('create', function() {
