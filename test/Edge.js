@@ -1,4 +1,4 @@
-const db = require('../lib');
+const db = require('../app/db');
 // const assert = require('assert');
 
 const {
