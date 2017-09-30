@@ -37,10 +37,10 @@
     ]
   },
   "dependencies": {
+    "express": "^4.16.1",
     "mocha": "^3.5.0",
     "pg": "^7.3.0",
     "pg-hstore": "^2.3.2",
-    "restify": "^6.0.1",
     "sequelize": "^4.11.0",
     "sequelize-cli": "^3.0.0",
     "simian-server-common": "0.0.2"

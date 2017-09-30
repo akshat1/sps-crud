@@ -1,1 +1,1 @@
-const restify = require('./restify');
+const rest = require('./rest');
