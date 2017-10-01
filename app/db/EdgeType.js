@@ -1,7 +1,7 @@
 /**
  * As the name suggests, describes an Edge "Type".
  * @typedef {Object} EdgeType
- * @name module:lib.EdgeType
+ * @name module:app/db.EdgeType
  * @property {number} id - auto-incrementing, primary-key
  * @property {Object} metadata
  * @property {string} name

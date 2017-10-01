@@ -1,1 +1,1 @@
-const rest = require('./rest');
+require('./rest');

@@ -1,7 +1,7 @@
 /**
  * An Edge in the graph.
  * @typedef {Object} Edge
- * @name module:lib.Edge
+ * @name module:app/db.Edge
  * @property {number} id - auto-incrementing, primary-key
  * @property {Object} metadata
  * @property {Vertex} from

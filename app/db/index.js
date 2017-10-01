@@ -1,6 +1,6 @@
 /**
  * Model for a simple graph. Initializes the DB and exports the models.
- * @module lib
+ * @module app/db
  */
 const Sequelize  = require('sequelize');
 const { config } = require('simian-server-common');

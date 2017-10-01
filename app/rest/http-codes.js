@@ -1,4 +1,10 @@
-// From https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+/**
+ * Contains HTTP status codes.
+ *
+ * @module app/rest/HTTPCodes
+ * @see https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+ * @see https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+ */
 module.exports = {
   // 1xx Informational
   continue          : 100,
