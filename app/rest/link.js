@@ -65,7 +65,7 @@ function retrieveAll(model, req, res) {
 }
 
 async function updateOne(model, itemData) {
-  const item = await model.findOne(itemData.id);
+  const item = await model.findById(itemData.id);
   if (!item) {
     throw Errors.NotFound();
   }
@@ -134,7 +134,12 @@ function link(server, model) {
   
   server.route(`/${model.name}/:id`)
     .get(_.curry(retrieveOne)(model))
-    .put(_.curry(updateOne)(model))
+    .put(function(req, res) {
+      logger.debug('updateOneWrapper', req.body);
+      return updateOne(model, req.body)
+        .then(_.curry(sendData)(res))
+        .catch(_.curry(sendError)(res));
+    })
     .delete(_.curry(delOne)(model));
 }
 
