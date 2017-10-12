@@ -4,3 +4,4 @@
 /.nyc_output/
 /plato/
 .vscode/
+/config.json
