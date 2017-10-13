@@ -1,39 +1,38 @@
-const db     = require('../app/db');
+const db     = require('../../app/db');
 const assert = require('assert');
 
 const {
-  EdgeType,
+  Vertex,
   sync,
 } = db;
 
-describe('EdgeType', function() {
+describe('Vertex', function() {
   before(function() {
     return sync({ force: true });
   });
 
-  it('Create', function() {
-    return EdgeType
+  it('create', function() {
+    return Vertex
       .create({
-        name: 'edgetype-0',
-        metadata: {},
-        isDirectional: true
+        name: 'text-vertex-0',
+        metadata: {}
       })
       .then(function(instance) {
         assert(!!instance, 'instance should be truthy');
-      })
+      });
   });
 
   it('retrieve', function() {
-    // Because we always force sync the db, the edgetype is always 1
-    return EdgeType
+    // Because we always force sync the db, the id is always 1
+    return Vertex
       .findById(1)
       .then(function(instance) {
         assert(!!instance, 'instance should be truthy');
       });
   });
 
-  it('Update', function() {
-    return EdgeType
+  it('update', function() {
+    return Vertex
       .findById(1)
       .then(function(instance) {
         return instance.update({ name: 'updated-name' });
@@ -44,7 +43,7 @@ describe('EdgeType', function() {
   });
 
   it('delete', function() {
-    return EdgeType
+    return Vertex
       .findById(1)
       .then(function(instance) {
         return instance.destroy();

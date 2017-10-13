@@ -8,7 +8,7 @@
     "fix-lint": "eslint app/ --fix",
     "lint": "eslint app/",
     "plato": "plato -d plato -r -e .eslintrc.plato.json ./app/",
-    "test": "nyc mocha"
+    "test": "nyc mocha --recursive"
   },
   "repository": {
     "type": "git",
