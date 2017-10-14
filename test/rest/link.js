@@ -61,10 +61,6 @@ describe('rest/link', function() {
     });
 
     beforeEach(function() {
-      /* mockSendError = sinon.spy(function(a, b) { // eslint-disable-line
-        console.trace('>>>', a, b, '<<<');
-      }); 
-      */
       mockSendError = sinon.stub();
       mockSendData  = sinon.stub();
       mockery.registerMock('./send-data', mockSendData);
