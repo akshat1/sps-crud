@@ -242,7 +242,5 @@ describe('rest/link', function() {
       await delAll(model, req, res);
       assert.deepEqual(mockSendData.args, [[res, { deleted: 42}]]);
     });
-
-    it('link');
   });
 });
