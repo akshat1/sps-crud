@@ -1,14 +1,14 @@
 {
   "name": "simian-store",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "description": "CRUD for the simian photo server project.",
-  "main": "lib/index.js",
+  "main": "app/index.js",
   "scripts": {
     "document": "jsdoc -c jsdoc.conf",
-    "fix-lint": "eslint lib/ --fix",
-    "lint": "eslint lib/",
-    "plato": "plato -d plato -r -e .eslintrc.plato.json ./lib/",
-    "test": "nyc mocha"
+    "fix-lint": "eslint app/ --fix",
+    "lint": "eslint app/",
+    "plato": "plato -d plato -r -e .eslintrc.plato.json ./app/",
+    "test": "nyc mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
   "nyc": {
     "all": true,
     "include": [
-      "lib/*.js"
+      "app/"
     ],
     "exclude": [
       "node_modules",
@@ -37,7 +37,8 @@
     ]
   },
   "dependencies": {
-    "mocha": "^3.5.0",
+    "express": "^4.16.1",
+    "lodash": "^4.17.4",
     "pg": "^7.3.0",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.11.0",
@@ -45,14 +46,16 @@
     "simian-server-common": "0.0.2"
   },
   "devDependencies": {
-    "eslint": "^4.6.1",
+    "chai": "^4.1.2",
     "eslint-config-simian": "0.0.3",
-    "jsdoc": "^3.5.5",
+    "eslint": "^4.6.1",
     "jsdoc-strip-async-await": "^0.1.0",
+    "jsdoc": "^3.5.5",
+    "mocha": "^3.5.0",
     "mockery": "^2.1.0",
     "nyc": "^11.2.0",
     "plato": "^1.7.0",
-    "sinon": "^3.2.1",
+    "sinon": "^3.3.0",
     "toast-jsdoc": "^1.0.2"
   }
 }

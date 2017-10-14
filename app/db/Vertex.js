@@ -1,7 +1,7 @@
 /**
  * A Vertex in the graph.
  * @typedef {Object} Vertex
- * @name module:lib.Vertex
+ * @name module:app/db.Vertex
  * @property {number} id - auto-incrementing, primary-key
  * @property {string} name - max 255 characters
  * @property {Object} metadata
