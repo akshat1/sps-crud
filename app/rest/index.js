@@ -6,7 +6,7 @@
 // Non HATEOS; Less than perfect REST.
 const db         = require('../db');
 const express    = require('express');
-const { link }       = require('./link');
+const link       = require('./link');
 const bodyParser = require('body-parser');
 const SSCommon   = require('simian-server-common');
 
