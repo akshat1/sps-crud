@@ -1,7 +1,7 @@
-const sendError = require('./send-error');
-const sendData  = require('./send-data');
 const SSCommon  = require('simian-server-common');
 const _         = require('lodash');
+const sendData  = require('./send-data');
+const sendError = require('./send-error');
 
 const logger = SSCommon.logger.getLogger({ level: 'debug' });
 

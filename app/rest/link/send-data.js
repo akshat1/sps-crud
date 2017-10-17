@@ -1,5 +1,5 @@
-const HTTPCodes = require('../http-codes');
 const SSCommon  = require('simian-server-common');
+const HTTPCodes = require('../http-codes');
 
 const logger = SSCommon.logger.getLogger({ level: 'debug' });
 

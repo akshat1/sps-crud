@@ -1,5 +1,5 @@
-const Errors   = require('../errors');
 const SSCommon = require('simian-server-common');
+const Errors   = require('../errors');
 
 const logger = SSCommon.logger.getLogger({ level: 'debug' });
 

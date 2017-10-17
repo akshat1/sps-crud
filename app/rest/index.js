@@ -4,11 +4,11 @@
  * @module app/rest
  */
 // Non HATEOS; Less than perfect REST.
-const db         = require('../db');
-const express    = require('express');
-const link       = require('./link');
 const bodyParser = require('body-parser');
+const express    = require('express');
 const SSCommon   = require('simian-server-common');
+const db         = require('../db');
+const link       = require('./link');
 
 const logger = SSCommon.logger.getLogger({ level: 'debug' });
 
