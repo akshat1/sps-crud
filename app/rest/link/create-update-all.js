@@ -1,12 +1,12 @@
-const _           = require('lodash');
-const SSCommon    = require('simian-server-common');
-const Errors      = require('../errors');
-const createOne   = require('./create-one');
-const sendData    = require('./send-data');
-const sendError   = require('./send-error');
-const updateOne   = require('./update-one');
+const _             = require('lodash');
+const { getLogger } = require('../../util');
+const Errors        = require('../errors');
+const createOne     = require('./create-one');
+const sendData      = require('./send-data');
+const sendError     = require('./send-error');
+const updateOne     = require('./update-one');
 
-const logger = SSCommon.logger.getLogger({ level: 'debug' });
+const logger = getLogger();
 
 module.exports = function createUpdateAll(model, req, res) {
   logger.debug('createUpdateAll', req.body);

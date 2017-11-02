@@ -1,7 +1,7 @@
-const SSCommon  = require('simian-server-common');
+const { getLogger } = require('../../util');
 const HTTPCodes = require('../http-codes');
 
-const logger = SSCommon.logger.getLogger({ level: 'debug' });
+const logger = getLogger();
 
 module.exports = function sendError(res, error) {
   logger.error('Error occurred', error);

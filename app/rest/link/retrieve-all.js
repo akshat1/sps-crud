@@ -1,9 +1,9 @@
-const _         = require('lodash');
-const SSCommon  = require('simian-server-common');
-const sendData  = require('./send-data');
-const sendError = require('./send-error');
+const _             = require('lodash');
+const { getLogger } = require('../../util');
+const sendData      = require('./send-data');
+const sendError     = require('./send-error');
 
-const logger = SSCommon.logger.getLogger({ level: 'debug' });
+const logger = getLogger('debug');
 
 module.exports =  function retrieveAll(model, req, res) {
   logger.debug('retrieveAll', req.body);
@@ -12,16 +12,17 @@ module.exports =  function retrieveAll(model, req, res) {
     offset,
     order,
     query
-  } = req.params;
+  } = req.body;
 
-  // TODO: Understand query syntax better
+  const findAllArgs = {
+    limit,
+    offset,
+    order,
+    where: query
+  };
+
   return model
-    .findAll({
-      limit,
-      offset,
-      order,
-      where: query
-    })
+    .findAll(findAllArgs)
     .then(items => sendData(res, {
       count: items.length,
       items,

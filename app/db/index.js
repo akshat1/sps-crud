@@ -10,7 +10,8 @@ const connectionString = config.get(connectionStringKey);
 if (!connectionString) {
   throw new Error(`No value defined for connection string >${connectionStringKey}<`);
 }
-const sequelize        = new Sequelize(connectionString);
+
+const sequelize = new Sequelize(connectionString, { logging: config.get('db.loggingOn') || false });
 
 const db = {};
 const EdgeType = db['EdgeType'] = sequelize.import('./EdgeType.js');

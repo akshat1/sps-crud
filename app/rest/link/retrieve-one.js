@@ -1,9 +1,9 @@
 const _         = require('lodash');
-const SSCommon  = require('simian-server-common');
+const { getLogger } = require('../../util');
 const sendData  = require('./send-data');
 const sendError = require('./send-error');
 
-const logger = SSCommon.logger.getLogger({ level: 'debug' });
+const logger = getLogger();
 
 module.exports = function retrieveOne(model, req, res) {
   const { id } = req.params;

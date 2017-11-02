@@ -113,7 +113,7 @@ describe('rest/link', function() {
     it('retrieveAll', async function() {
       const retrieveAll = require('../../app/rest/link/retrieve-all');
       const req = {
-        params: {
+        body: {
           limit: 1,
           offset: 2,
           order: 3,

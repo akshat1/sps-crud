@@ -1,7 +1,7 @@
-const SSCommon = require('simian-server-common');
+const { getLogger } = require('../../util');
 const Errors   = require('../errors');
 
-const logger = SSCommon.logger.getLogger({ level: 'debug' });
+const logger = getLogger();
 
 module.exports = async function updateOne(model, itemData) {
   const item = await model.findById(itemData.id);
